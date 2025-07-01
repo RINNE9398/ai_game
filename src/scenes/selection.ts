@@ -12,32 +12,12 @@ export default class selection extends Phaser.Scene {
   preload() {
     // アセット読み込み
     this.load.image('old_town_street', '/assets/old_town_street.jpg');
+    this.load.image
   }
 
   create() {
     // 背景画像
     this.add.image(0, 0, 'old_town_street').setOrigin(0, 0).setDisplaySize(1024, 768);
-
-    // タイトルテキスト
-    this.add.text(400, 200, 'DOKIDOKI!ROMANCEAI', {
-      fontFamily: 'chunk',
-      fontSize: '64px',
-      color: 'white'
-    }).setOrigin(0.5);
-
-    const blinkText = this.add.text(512, 700, 'Pless Enter Key', {
-      fontFamily: "chunk",
-      fontSize: '32px',
-      color: 'Blue'
-    }).setOrigin(0.5);
-
-    this.tweens.add({
-      targets: blinkText,
-      alpha: 0,
-      duration: 1000,
-      yoyo: true,
-      repeat: -1
-    })
 
     // キー入力設定
     if (this.input.keyboard) {
