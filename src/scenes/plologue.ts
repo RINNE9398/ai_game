@@ -9,7 +9,7 @@ export default class plologue extends Phaser.Scene {
 
   preload() {
     // アセット読み込み
-    this.load.image('mainMenu', '/public/assets/mainMenu.jpg');
+    this.load.image('mainMenu', '/assets/mainMenu.jpg');
   }
 
   create() {
