@@ -5,6 +5,8 @@ import App from './top/App.tsx'
 import mainMenu from './scenes/mainmenu.ts'
 import plologue from './scenes/plologue.ts'
 import selection from './scenes/selection.ts'
+import akaneScene from './scenes/akaneScene.ts'
+import run from './geminiSetup.ts'
 
 const config = {
   type: Phaser.AUTO,
@@ -16,6 +18,7 @@ const config = {
     mainMenu,
     plologue,
     selection,
+    akaneScene,
   ],//ここにシーンを追加していきシーン側でthis scene start("")で読み込み
   backgroundColor: '#028af8',// 背景色
     scale: {
