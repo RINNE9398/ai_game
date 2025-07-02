@@ -31,7 +31,7 @@ export default class selection extends Phaser.Scene {
   const boxMargin = 30;
 
   // 1つ目のボックス（左）
-  const box1X = 40;
+  const box1X = 107;
   // 2つ目のボックス（中央）
   const box2X = box1X + boxWidth + boxMargin;
   // 3つ目のボックス（右）

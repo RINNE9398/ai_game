@@ -12,6 +12,7 @@ export default class MainMenu extends Phaser.Scene {
   preload() {
     // アセット読み込み
     this.load.image('mainMenu', '/assets/mainMenu.jpg');
+        this.load.audio('bgm_plologue','池に潜む.mp3')
   }
 
   create() {

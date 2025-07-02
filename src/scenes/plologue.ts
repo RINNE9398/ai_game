@@ -7,10 +7,6 @@ export default class plologue extends Phaser.Scene {
     super('plologue');
   }
 
-  preload() {
-    // アセット読み込み
-    this.load.image('mainMenu', '/assets/mainMenu.jpg');
-  }
 
   create() {
     // 画面中央に画像とテキストを配置
@@ -48,6 +44,22 @@ export default class plologue extends Phaser.Scene {
       yoyo: true,
       repeat: -1
     })
+
+    const bgm = this.sound.add('bgm_plologue');
+
+    // マーカーを定義する
+    bgm.addMarker({
+      name: 'loop',
+      start: 0,
+      duration: 88,
+      config: {
+        loop: true,
+        volume: 0.5,
+      },
+    });
+
+    // marker 名で再生する（オブジェクトリテラルではない！）
+    bgm.play('loop');
 
     // 何かキーが押されたらテキストボックスとテキストをフェードアウトして次のシーンへ
     this.input.keyboard?.on('keydown', () => {
