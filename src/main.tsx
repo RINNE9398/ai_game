@@ -6,7 +6,6 @@ import mainMenu from './scenes/mainmenu.ts'
 import plologue from './scenes/plologue.ts'
 import selection from './scenes/selection.ts'
 import akaneScene from './scenes/akaneScene.ts'
-import run from './geminiSetup.ts'
 
 const config = {
   type: Phaser.AUTO,
